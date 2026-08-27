@@ -1,7 +1,6 @@
 baseURL: https://arch-on.top/
 locale: en-us
 title: at3mic
-contentDir: content
 
 pagination:
   pagerSize: 5
@@ -33,10 +32,8 @@ params:
     enableSass: true
   logo:
     logoText: at3mic
-  themeColor: red
   showMenuItems: 4
   centerTheme: true
-  hideCredits: false
 
 module:
   imports:
