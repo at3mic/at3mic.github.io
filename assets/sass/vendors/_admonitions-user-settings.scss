@@ -1,0 +1,48 @@
+// --- Theme Colors ---
+// Define the colors used for admonition elements in both light and dark modes.
+
+// Light Mode Colors
+$admonition-light-bg: #1a170f;                 // Content background
+$admonition-light-text: #eceae5;               // Content text
+$admonition-light-code-bg: #221e15;            // Inline code & code block background
+$admonition-light-code-text: #eceae5;          // Inline code & code block text
+$admonition-light-blockquote-border: #8b6f32;  // Blockquote left border
+
+// Dark Mode Colors
+$admonition-dark-bg: #1a170f;                  // Content background
+$admonition-dark-text: #eceae5;                // Content text
+$admonition-dark-code-bg: #221e15;             // Inline code & code block background
+$admonition-dark-code-text: #eceae5;           // Inline code & code block text
+$admonition-dark-blockquote-border: #8b6f32;   // Blockquote left border
+
+// --- Header Background Opacity ---
+// Controls the opacity of the background color tint applied to the whole admonition block.
+// Value should be between 0 (transparent) and 1 (opaque).
+$admonition-light-header-bg-opacity: 0.15;     // Opacity for light mode background tint
+$admonition-dark-header-bg-opacity: 0.15;      // Opacity for dark mode background tint
+
+// --- Admonition Type Base Colors ---
+// Override the default color for all admonition types.
+$admonition-colors-overrides: (
+  abstract: #8b6f32,
+  caution: #8b6f32,
+  code: #8b6f32,
+  conclusion: #8b6f32,
+  danger: #8b6f32,
+  error: #8b6f32,
+  example: #8b6f32,
+  experiment: #8b6f32,
+  goal: #8b6f32,
+  idea: #8b6f32,
+  important: #8b6f32,
+  info: #8b6f32,
+  memo: #8b6f32,
+  note: #8b6f32,
+  notify: #8b6f32,
+  question: #8b6f32,
+  quote: #8b6f32,
+  success: #8b6f32,
+  task: #8b6f32,
+  tip: #8b6f32,
+  warning: #8b6f32
+);

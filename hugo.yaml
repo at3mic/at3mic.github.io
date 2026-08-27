@@ -1,6 +1,47 @@
 baseURL: https://arch-on.top/
 locale: en-us
 title: at3mic
+contentDir: content
+
+pagination:
+  pagerSize: 5
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+    - identifier: github
+      name: GitHub
+      url: https://github.com/at3mic/
+    - identifier: blog
+      name: Blog
+      url: /posts/
+    - identifier: discord
+      name: Discord
+      url: https://discord.com/users/1305241305806409860
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+params:
+  hugoAdmonitions:
+    enableSass: true
+  logo:
+    logoText: at3mic
+  themeColor: red
+  showMenuItems: 4
+  centerTheme: true
+  hideCredits: false
+
+module:
+  imports:
+    - path: github.com/panr/hugo-theme-terminal/v4
+    - path: github.com/KKKZOZ/hugo-admonitions
 
 caches:
   images:
