@@ -1,0 +1,23 @@
+name: Deploy Hugo site to Proxmox
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+  
+jobs:
+  build:
+    if: "!startsWith(github.event.head_commit.message, '[skip-ci]') && github.actor == 'at3mic'"
+    runs-on: self-hosted
+    defaults:
+      run:
+        working-directory: /home/runner/arch-on-top
+    steps:
+      - name: Pulling changes
+        run: git pull
+      - name: Build with Hugo
+        run: |
+          hugo build \
+            --gc \
+            --minify
