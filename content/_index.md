@@ -4,7 +4,7 @@ date: 2026-08-27T22:32:42+02:00
 draft: false
 ---
 
-![My banner](/banner.jpg)
+<img src="/banner.jpg" alt="My banner" width="1200" height="300">
 
 hey! I'm [at3mic](https://github.com/at3mic). I'm a Go and Python developer from Poland.
 

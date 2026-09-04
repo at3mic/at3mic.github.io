@@ -38,7 +38,7 @@ body {
   font-weight: 400;
 }
 
-.container.center { width: min(100% - 2rem, 1120px); max-width: 1120px; margin: 0 auto; }
+.container.center { width: min(100% - 2rem, 1120px); margin: 0 auto; }
 .container.center > * { width: 100%; }
 .content { align-items: center; margin-top: 3.5rem; }
 .content > * { width: min(100%, 760px); }
@@ -60,7 +60,6 @@ body {
   letter-spacing: .04em;
   padding: .55rem .8rem;
 }
-.logo::before { content: none; }
 .logo img {
   width: 1.35rem;
   height: 1.35rem;
@@ -99,21 +98,34 @@ h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); margin-top: 3rem; }
 h3 { font-size: 1.45rem; }
 p, ul, ol { max-width: 70ch; }
 p { margin: 1.25rem 0; }
-.index-content { margin: 0; max-width: 70ch; }
-.index-content > p:nth-of-type(1) { font-family: Newsreader, Georgia, serif; font-size: clamp(1.35rem, 2.5vw, 1.8rem); line-height: 1.25; max-width: 32ch; }
-.index-content > img {
-  border: 1px solid var(--foreground);
-  box-shadow: .65rem .65rem 0 var(--shadow);
-  margin: 2.5rem auto 3rem;
-  padding: 0;
-  width: min(100%, 760px);
+.index-content { margin: 0; max-width: 760px; width: 100%; }
+.index-content > p,
+.index-content > h2,
+.index-content > blockquote { width: 100%; }
+.index-content > p:first-child {
+.index-content > p:first-child img {
+  border: 8px solid var(--accent);
+  display: block;
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+}
+.index-content > p:nth-of-type(2) {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: var(--line-height);
+  margin: 0 0 1rem;
+}
+.index-content > p:nth-of-type(3) {
+  margin-left: 0;
+  margin-right: 0;
 }
 .index-content blockquote {
   background: var(--surface);
   border: 1px solid var(--line);
   border-left: .45rem solid var(--accent);
-  box-shadow: .45rem .45rem 0 var(--shadow);
-  margin: 1.5rem auto;
+  color: var(--foreground);
+  margin: 1rem 0 0;
   padding: 1.5rem 1.75rem;
   position: relative;
 }
@@ -177,8 +189,10 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 @media (max-width: 684px) {
   .content { margin-top: 2.5rem; }
   .header { padding-bottom: .8rem; }
-  .index-content > img { box-shadow: .35rem .35rem 0 var(--shadow); margin-bottom: 2.25rem; }
-  .index-content blockquote { padding: 1.25rem; }
+  .index-content > p:first-child { margin: 0 0 1.25rem; width: 100%; }
+  .index-content > p:first-child img { border-width: 8px; padding: 8px; }
+  .index-content > p:nth-of-type(3) { margin-top: .75rem; }
+  .index-content blockquote { margin-top: .75rem; padding: 1.25rem; }
   .index-content blockquote::after { position: static; display: block; margin-bottom: 1rem; }
   .index-content blockquote p:first-of-type { padding-right: 0; }
   h1 { font-size: 2.8rem; }
