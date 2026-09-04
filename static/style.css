@@ -81,10 +81,9 @@ body {
 .theme-toggle:hover { background: var(--surface); }
 .theme-toggle__icon { font-size: 1rem; }
 .navigation-menu { margin: 1rem 0 0; }
-.navigation-menu__inner { gap: .2rem 1.4rem; }
-.header,
-.navigation-menu { width: 100%; }
-.navigation-menu__inner { width: 100%; }
+.navigation-menu__inner { gap: 0; }
+.navigation-menu__inner > li:not(:last-of-type) { margin-right: 20px; }
+.navigation-menu__inner a { display: inline; padding: 0; }
 a { color: var(--accent-strong); text-decoration-thickness: 1px; text-underline-offset: .2em; }
 a:hover { color: var(--accent); }
 
