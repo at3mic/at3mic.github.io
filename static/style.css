@@ -44,7 +44,7 @@ body {
 .content > * { width: min(100%, 760px); }
 .header { border-bottom: 1px solid var(--line); padding-bottom: 1.1rem; }
 .header__inner { align-items: center; gap: 1rem; }
-.header__actions { align-items: center; display: flex; gap: .75rem; }
+.header__actions { align-items: center; display: flex; }
 .header__logo::after {
   background: repeating-linear-gradient(90deg, var(--line), var(--line) 1px, transparent 0, transparent 9px);
   opacity: .9;
@@ -82,7 +82,9 @@ body {
 .theme-toggle__icon { font-size: 1rem; }
 .navigation-menu { margin: 1rem 0 0; }
 .navigation-menu__inner { gap: .2rem 1.4rem; }
-.navigation-menu__inner > li:not(:last-of-type) { margin-right: 0; }
+.header,
+.navigation-menu { width: 100%; }
+.navigation-menu__inner { width: 100%; }
 a { color: var(--accent-strong); text-decoration-thickness: 1px; text-underline-offset: .2em; }
 a:hover { color: var(--accent); }
 
@@ -103,6 +105,9 @@ p { margin: 1.25rem 0; }
 .index-content > h2,
 .index-content > blockquote { width: 100%; }
 .index-content > p:first-child {
+  margin: 0 0 1.25rem;
+  width: 100%;
+}
 .index-content > p:first-child img {
   border: 8px solid var(--accent);
   display: block;
@@ -129,16 +134,7 @@ p { margin: 1.25rem 0; }
   padding: 1.5rem 1.75rem;
   position: relative;
 }
-.index-content blockquote::after {
-  color: var(--accent);
-  content: "PROJECT NOTE";
-  font: 500 .68rem/1 "DM Mono", monospace;
-  letter-spacing: .14em;
-  position: absolute;
-  right: 1.5rem;
-  top: 1.5rem;
-}
-.index-content blockquote p:first-of-type { padding-right: 8rem; }
+.index-content blockquote p:first-of-type { padding-right: 0; }
 
 .post { border-bottom: 1px solid var(--line); padding: 2.25rem 0; }
 .post-meta, .post-tags, .footer { color: var(--muted); font-family: "DM Mono", monospace; font-size: .78rem; }
@@ -175,6 +171,12 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
   background: transparent;
   color: var(--foreground);
   padding: 1rem 1.25rem;
+}
+.admonition-content p,
+.admonition-content ul,
+.admonition-content ol {
+  max-width: none;
+  width: 100%;
 }
 .admonition-content code:not(pre > code) { background: var(--surface); color: var(--accent-strong); }
 .admonition-content pre { background: var(--surface); }
