@@ -1,6 +1,6 @@
-<a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{else}}{{ $.Site.BaseURL }}{{ end }}">
+<a class="site-logo-link" href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{ else }}{{ $.Site.BaseURL }}{{ end }}" aria-label="{{ $.Site.Title }} home">
   <div class="logo">
-    <img src="/favicon.png">
+    <img src="/favicon.png" alt="" width="40" height="40" aria-hidden="true">
     {{ with $.Site.Params.Logo.logoText }}{{ . }}{{ else }}Terminal{{ end }}
   </div>
 </a>

@@ -2,18 +2,18 @@
 // Define the colors used for admonition elements in both light and dark modes.
 
 // Light Mode Colors
-$admonition-light-bg: #1a170f;                 // Content background
-$admonition-light-text: #eceae5;               // Content text
-$admonition-light-code-bg: #221e15;            // Inline code & code block background
-$admonition-light-code-text: #eceae5;          // Inline code & code block text
-$admonition-light-blockquote-border: #8b6f32;  // Blockquote left border
+$admonition-light-bg: #e8dfd2;
+$admonition-light-text: #211d1a;
+$admonition-light-code-bg: #f4efe6;
+$admonition-light-code-text: #211d1a;
+$admonition-light-blockquote-border: #b4472d;
 
 // Dark Mode Colors
-$admonition-dark-bg: #1a170f;                  // Content background
-$admonition-dark-text: #eceae5;                // Content text
-$admonition-dark-code-bg: #221e15;             // Inline code & code block background
-$admonition-dark-code-text: #eceae5;           // Inline code & code block text
-$admonition-dark-blockquote-border: #8b6f32;   // Blockquote left border
+$admonition-dark-bg: #302721;
+$admonition-dark-text: #f4efe6;
+$admonition-dark-code-bg: #211d1a;
+$admonition-dark-code-text: #f4efe6;
+$admonition-dark-blockquote-border: #e47754;
 
 // --- Header Background Opacity ---
 // Controls the opacity of the background color tint applied to the whole admonition block.
@@ -22,27 +22,27 @@ $admonition-light-header-bg-opacity: 0.15;     // Opacity for light mode backgro
 $admonition-dark-header-bg-opacity: 0.15;      // Opacity for dark mode background tint
 
 // --- Admonition Type Base Colors ---
-// Override the default color for all admonition types.
+// Keep the terminal palette semantic: status blocks should communicate meaning.
 $admonition-colors-overrides: (
   abstract: #8b6f32,
-  caution: #8b6f32,
+  caution: #c5a55a,
   code: #8b6f32,
   conclusion: #8b6f32,
-  danger: #8b6f32,
-  error: #8b6f32,
+  danger: #b85c4a,
+  error: #b85c4a,
   example: #8b6f32,
   experiment: #8b6f32,
-  goal: #8b6f32,
-  idea: #8b6f32,
-  important: #8b6f32,
-  info: #8b6f32,
+  goal: #c5a55a,
+  idea: #c5a55a,
+  important: #c5a55a,
+  info: #8b9fba,
   memo: #8b6f32,
-  note: #8b6f32,
-  notify: #8b6f32,
-  question: #8b6f32,
+  note: #8b9fba,
+  notify: #8b9fba,
+  question: #8b9fba,
   quote: #8b6f32,
-  success: #8b6f32,
+  success: #7e9b68,
   task: #8b6f32,
-  tip: #8b6f32,
-  warning: #8b6f32
+  tip: #7e9b68,
+  warning: #c5a55a
 );
